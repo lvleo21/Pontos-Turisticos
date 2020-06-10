@@ -2,3 +2,4 @@ venv
 migrate.sh
 mm.sh
 run.sh
+db.sqlite3
