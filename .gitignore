@@ -4,3 +4,4 @@ mm.sh
 run.sh
 venv.sh
 db.sqlite3
+git.sh
