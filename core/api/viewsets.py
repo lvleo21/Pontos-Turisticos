@@ -12,7 +12,14 @@ class PontoTuristicoViewSet(ModelViewSet):
     
     #define como serar a queryset do model
     def get_queryset(self):
-        queryset = PontoTuristico.objects.filter(aprovado = True)
+        nome = self.request.query_params.get("nome", None)
+
+        queryset = PontoTuristico.objects.all()
+
+        if nome is not None:
+            queryset = queryset.filter(nome = nome)
+
+
         return queryset
 
     # retorna uma lista
