@@ -6,6 +6,7 @@ class Atracao(models.Model):
     opening_time = models.TimeField()
     closing_time = models.TimeField()
     minimum_age = models.IntegerField()
+    foto = models.ImageField(upload_to="atracoes", null=True, blank=True)
     
 
     def __str__(self):
